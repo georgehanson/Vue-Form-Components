@@ -26,12 +26,12 @@ If you would just like to import one or selected components, you can do the foll
 
 I recommend when using this package to declare the components as global components. This can be done one of the following ways:
 
-```ecmascript 6
+```javascript
 Import VueFormComponents from 'vue-form-components';
 Vue.component('input-box', VueFormComponents.InputBoxComponent);
 ```
 Or
-```ecmascript 6
+```javascript
 const VueFormComponents  = require('vue-form-components');
 Vue.component('input-box', VueFormComponents.InputBoxComponent);
 ```
@@ -44,5 +44,5 @@ This component is designed to save time and repetition by not having to duplicat
 component is `InputBoxComponent`.
 
 | Prop        | Type     | Default    | Required  |
-| ----------- |:------- :|:----------:|:---------:|
+| ----------- | -------  | ---------- | --------- |
 | name        | String   |            | Yes       |
