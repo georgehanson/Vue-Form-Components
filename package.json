@@ -1,6 +1,6 @@
 {
   "name": "vue-form-components",
-  "version": "0.0.7",
+  "version": "1.0.1",
   "description": "A collection of bootstrap form components for Vue 2",
   "main": "dist/build.js",
   "scripts": {
