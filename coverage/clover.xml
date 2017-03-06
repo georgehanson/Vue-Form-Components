@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1488797081484" clover="3.2.0">
-  <project timestamp="1488797081485" name="All files">
-    <metrics statements="13" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="4" elements="20" coveredelements="14" complexity="0" loc="13" ncloc="13" packages="1" files="3" classes="3">
-      <file name="InputBox.vue" path="/home/george/Projects/Vue Form Components/src/Components/InputBox.vue">
-        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-      </file>
-      <file name="Switch.vue" path="/home/george/Projects/Vue Form Components/src/Components/Switch.vue">
-        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-      </file>
-      <file name="TextArea.vue" path="/home/george/Projects/Vue Form Components/src/Components/TextArea.vue">
-        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-      </file>
+<coverage generated="1488797397846" clover="3.2.0">
+  <project timestamp="1488797397846" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0">
     </metrics>
   </project>
 </coverage>
