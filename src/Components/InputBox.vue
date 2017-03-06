@@ -54,7 +54,7 @@
 
         computed: {
             usingAddons() {
-               return Object.keys(this.$slots).length === 0 && this.$slots.constructor === Object
+               return ! (Object.keys(this.$slots).length === 0 && this.$slots.constructor === Object)
             }
         },
 
