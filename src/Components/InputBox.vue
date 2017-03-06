@@ -2,7 +2,7 @@
     <div class="form-group" :class="{'has-error': showError }">
         <label class="control-label" :class="{'col-sm-2': !stacked}">{{ label }}: <span v-if="required">*</span></label>
         <div :class="{'col-sm-10': !stacked}">
-            <div class="input-group">
+            <div :class="{'input-group': usingAddons}">
                 <div class="input-group-addon" v-if="slotExists('leftAddon')">
                     <slot name="leftAddon"></slot>
                 </div>
@@ -50,6 +50,12 @@
             readonly: Boolean,
             id: String,
             errorMessage: String
+        },
+
+        computed: {
+            usingAddons() {
+               return Object.keys(this.$slots).length === 0 && this.$slots.constructor === Object
+            }
         },
 
         methods: {
