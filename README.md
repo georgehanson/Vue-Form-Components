@@ -3,7 +3,7 @@ This package provides easy form wrappers for Vue2, based upon the Bootstrap CSS 
 
 The following components which are supported are:
 
-- Standard Input Box
+- Standard Input Box (Including input addons)
 - Toggle Switch
 - Text Area
 
@@ -43,6 +43,32 @@ You can then use these components globally throughout your application.
 
 This component is designed to save time and repetition by not having to duplicate form groups. The name for this
 component is `InputBoxComponent`. This component can be used in conjunction with the `v-model` directive.
+
+#### Addons
+With the Standard input box component, you can also use input group addons. This can be done by simply adding slots.
+
+| Slot         | Description |
+| ------------ | ----------- |
+| leftAddon    | A standard input group addon on the left side of the input field |
+| rightAddon   | A standard input group addon on the right side of the input field |
+| leftBtn      | An input group button on the left side of the input field |
+| rightBtn     | An input group button on the right side of the input |
+
+For example, if I wanted to create an input box, with an addon on the right hand side, I could do the following:
+
+```html
+<input-box v-model="model" name="email_address" label="Email Address">
+    <div slot="rightAddon">@example.com</div>
+</input-box>
+```
+
+Alternatively, for a button on the right hand side, I could do the following:
+
+```html
+<input-box v-model="model" name="email_address" label="Email Address">
+    <button slot="rightBtn" class="btn btn-default">Search</button>
+</input-box>
+```
 
 | Prop         | Type     | Default    | Required  | Description |
 | ------------ | -------  | ---------- | --------- | ----------- |
