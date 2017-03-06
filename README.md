@@ -5,6 +5,7 @@ The following components which are supported are:
 
 - Standard Input Box
 - Toggle Switch
+- Text Area
 
 ## Installation
 
@@ -66,3 +67,18 @@ This component can be used in conjunction with the `v-model` directive.
 | name         | String   |            | Yes       | The checkbox name |
 | label        | String   |            | Yes       | The label for the checkbox |
 | id           | String   |            | No        | The id for the checkbox |
+
+### Text Area
+
+This component generates a textarea within a bootstrap form group. The name for this component is `TextAreaComponent`.
+This component can be used in conjunction with the `v-model` directive.
+
+| Prop         | Type     | Default    | Required  | Description |
+| ------------ | -------  | ---------- | --------- | ----------- |
+| name         | String   |            | Yes       | The textarea name |
+| label        | String   |            | Yes       | The label for the textarea |
+| showError    | Boolean  | false      | No        | Whether or not to show a validation error |
+| errorMessage | String   |            | No        | The error message to show |
+| stacked      | Boolean  | false      | No        | Show the label above the textarea |
+| required     | Boolean  | false      | No        | Mark the field as required |
+| id           | String   |            | No        | The id for the html input |

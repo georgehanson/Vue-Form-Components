@@ -4,3 +4,6 @@ webpack.config.js
 src
 .idea
 npm-debug.log
+tests
+jest
+coverage
