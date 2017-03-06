@@ -1,5 +1,5 @@
 TN:
-SF:C:\Github\Vue Form Components\src\Components\InputBox.vue
+SF:/home/george/Projects/Vue Form Components/src/Components/InputBox.vue
 FN:1,(anonymous_0)
 FN:35,_default
 FN:46,updateValue
@@ -19,7 +19,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:C:\Github\Vue Form Components\src\Components\Switch.vue
+SF:/home/george/Projects/Vue Form Components/src/Components/Switch.vue
 FN:1,(anonymous_0)
 FN:42,updateValue
 FNF:2
@@ -36,7 +36,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:C:\Github\Vue Form Components\src\Components\TextArea.vue
+SF:/home/george/Projects/Vue Form Components/src/Components/TextArea.vue
 FN:1,(anonymous_0)
 FN:38,updateValue
 FNF:2
