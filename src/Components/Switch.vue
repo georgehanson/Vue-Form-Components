@@ -1,7 +1,7 @@
 <template>
     <div class="form-group switch-group">
-        <label class="control-label" :class="{labelColumn: ! stacked }">{{ label }}</label>
-        <div :class="{inputColumn: ! stacked }">
+        <label class="control-label" :class="labelColumnClass">{{ label }}</label>
+        <div :class="inputColumnClass">
             <label class="switch-component">
                 <input type="checkbox" :id="id" :name="name" :checked="checked" v-on:change="updateValue($event.target.checked)">
                 <div class="slider round"></div>
@@ -44,6 +44,20 @@
             inputColumn: {
                 type: String,
                 default: 'col-sm-10'
+            }
+        },
+
+        computed: {
+            labelColumnClass() {
+                if(! this.stacked) {
+                    return this.labelColumn;
+                }
+            },
+
+            inputColumnClass() {
+                if(! this.stacked) {
+                    return this.inputColumn;
+                }
             }
         },
 
