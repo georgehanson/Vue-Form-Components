@@ -97,6 +97,8 @@ This component can be used in conjunction with the `v-model` directive.
 | label        | String   |            | Yes       | The label for the checkbox |
 | id           | String   |            | No        | The id for the checkbox |
 | stacked      | Boolean  | false      | No        | Show the label above the switch component
+| labelColumn  | String   | col-sm-2   | No        | The bootstrap column for the label |
+| inputColumn  | String   | col-sm-10  | No        | The bootstrap column for the input |
 
 ### Text Area
 
