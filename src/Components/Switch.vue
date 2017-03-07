@@ -1,7 +1,7 @@
 <template>
     <div class="form-group switch-group">
-        <label class="col-sm-2 control-label">{{ label }}</label>
-        <div class="col-sm-10">
+        <label class="control-label" :class="{'col-sm-2': ! stacked }">{{ label }}</label>
+        <div :class="{'col-sm-10': ! stacked }">
             <label class="switch-component">
                 <input type="checkbox" :id="id" :name="name" :checked="checked" v-on:change="updateValue($event.target.checked)">
                 <div class="slider round"></div>
@@ -25,6 +25,11 @@
             label: {
                 type: String,
                 required: true
+            },
+
+            stacked: {
+                type: Boolean,
+                default: false
             },
 
             id: String,
