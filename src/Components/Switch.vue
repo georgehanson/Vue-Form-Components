@@ -3,7 +3,7 @@
         <label class="control-label" :class="labelColumnClass">{{ label }}</label>
         <div :class="inputColumnClass">
             <label class="switch-component">
-                <input type="checkbox" :id="id" :name="name" :checked="checked">
+                <input type="checkbox" :id="id" :name="name" :checked="checked" v-on:change="updateValue($event.target.checked)">
                 <div class="slider round"></div>
             </label>
         </div>
@@ -58,6 +58,12 @@
                 if(! this.stacked) {
                     return this.inputColumn;
                 }
+            }
+        },
+
+        methods: {
+            updateValue(value) {
+                this.$emit('change', value)
             }
         }
     };
