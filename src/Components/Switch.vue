@@ -6,6 +6,7 @@
                 <input type="checkbox" :id="id" :name="name" :checked="checked" v-on:change="updateValue($event.target.checked)">
                 <div class="slider round"></div>
             </label>
+            <p class="help-block" v-if="helper">{{ helper }}</p>
         </div>
     </div>
 </template>
@@ -31,6 +32,8 @@
                 type: Boolean,
                 default: false
             },
+
+            helper: String,
 
             id: String,
 

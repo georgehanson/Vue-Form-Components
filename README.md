@@ -77,6 +77,7 @@ Alternatively, for a button on the right hand side, I could do the following:
 | ------------ | -------  | ---------- | --------- | ----------- |
 | name         | String   |            | Yes       | The input name for the field |
 | label        | String   |            | Yes       | The label for the input |
+| helper        | String  |            | No        | Helper text  |
 | showError    | Boolean  | false      | No        | Whether or not to show a validation error |
 | errorMessage | String   |            | No        | The error message to show |
 | placeholder  | String   |            | No        | A placeholder for the input |
@@ -95,6 +96,7 @@ This component can be used in conjunction with the `v-model` directive.
 | ------------ | -------  | ---------- | --------- | ----------- |
 | name         | String   |            | Yes       | The checkbox name |
 | label        | String   |            | Yes       | The label for the checkbox |
+| helper        | String  |            | No        | Helper text  |
 | id           | String   |            | No        | The id for the checkbox |
 | stacked      | Boolean  | false      | No        | Show the label above the switch component
 | labelColumn  | String   | col-sm-2   | No        | The bootstrap column for the label |
@@ -109,6 +111,7 @@ This component can be used in conjunction with the `v-model` directive.
 | ------------ | -------  | ---------- | --------- | ----------- |
 | name         | String   |            | Yes       | The textarea name |
 | label        | String   |            | Yes       | The label for the textarea |
+| helper        | String  |            | No        | Helper text  |
 | showError    | Boolean  | false      | No        | Whether or not to show a validation error |
 | errorMessage | String   |            | No        | The error message to show |
 | stacked      | Boolean  | false      | No        | Show the label above the textarea |
