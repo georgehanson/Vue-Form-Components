@@ -1,7 +1,7 @@
 <template>
     <div class="form-group" :class="{'has-error': showError }">
-        <label class="control-label" :class="{'col-sm-2': !stacked}">{{ label }}: <span v-if="required">*</span></label>
-        <div :class="{'col-sm-10': !stacked}">
+        <label class="control-label" :class="{'col-sm-2': !stacked}" v-if="label">{{ label }}: <span v-if="required">*</span></label>
+        <div :class="{'col-sm-10': (!stacked && label)}">
             <div :class="{'input-group': usingAddons}">
                 <div class="input-group-addon" v-if="slotExists('leftAddon')">
                     <slot name="leftAddon"></slot>
@@ -35,7 +35,6 @@
             },
             label: {
                 type: String,
-                required: true
             },
             helper: String,
             showError: Boolean,
