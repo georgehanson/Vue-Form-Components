@@ -76,7 +76,7 @@ Alternatively, for a button on the right hand side, I could do the following:
 | Prop         | Type     | Default    | Required  | Description |
 | ------------ | -------  | ---------- | --------- | ----------- |
 | name         | String   |            | Yes       | The input name for the field |
-| label        | String   |            | Yes       | The label for the input |
+| label        | String   |            | No       | The label for the input |
 | helper        | String  |            | No        | Helper text  |
 | showError    | Boolean  | false      | No        | Whether or not to show a validation error |
 | errorMessage | String   |            | No        | The error message to show |
