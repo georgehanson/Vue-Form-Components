@@ -9,6 +9,7 @@ The following components which are supported are:
 - Standard Input Box (Including input addons)
 - Toggle Switch
 - Text Area
+- Select List
 
 ## Installation
 
@@ -117,3 +118,21 @@ This component can be used in conjunction with the `v-model` directive.
 | stacked      | Boolean  | false      | No        | Show the label above the textarea |
 | required     | Boolean  | false      | No        | Mark the field as required |
 | id           | String   |            | No        | The id for the html input |
+
+### Select List
+
+This component generates a select input within a bootstrap form group. The name for this component is `Listcomponent`.
+This component can be used in conjunction with the `v-model` directive.
+
+| Prop         | Type     | Default    | Required  | Description |
+| ------------ | -------  | ---------- | --------- | ----------- |
+| name         | String   |            | Yes       | The select list name |
+| label        | String   |            | No       | The label for the select list |
+| options        | Array   |            | Yes       | The options to choose from |
+| keyName        | String   |  id          | No       | The name of the key for the value in the options |
+| labelName        | String   |  label          | No       | The name of the key for the label in the options |
+| helper        | String  |            | No        | Helper text  |
+| showError    | Boolean  | false      | No        | Whether or not to show a validation error |
+| errorMessage | String   |            | No        | The error message to show |
+| stacked      | Boolean  | false      | No        | Show the label above the textarea |
+| required     | Boolean  | false      | No        | Mark the field as required |
