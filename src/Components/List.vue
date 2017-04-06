@@ -47,6 +47,12 @@
             required: Boolean,
             errorMessage: String
         },
+	
+	mounted() {
+	    if(this.value) {
+		this.updateValue(this.value);
+	    }
+	},
 
         methods: {
             updateValue(value) {
