@@ -57,7 +57,6 @@
         updated() {
             if(this.options.length) {
                 let element = document.getElementById(this.name);
-                console.log(element);
                 if(element.options[element.selectedIndex]) {
                     this.updateValue(element.options[element.selectedIndex].value);
                 }
