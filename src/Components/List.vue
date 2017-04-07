@@ -56,12 +56,10 @@
 
         watch: {
             options(value) {
-                if(value.length) {
-                    let element = document.getElementById(this.name);
+                let element = document.getElementById(this.name);
 
-                    if(element.options[element.selectedIndex]) {
-                        this.updateValue(element.options[element.selectedIndex].value);
-                    }
+                if(element.options[element.selectedIndex]) {
+                    this.updateValue(element.options[element.selectedIndex].value);
                 }
             }
         }
