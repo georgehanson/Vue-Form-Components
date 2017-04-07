@@ -48,11 +48,13 @@
             errorMessage: String
         },
 	
-	mounted() {
-	    if(this.value) {
-		this.updateValue(this.value);
-	    }
-	},
+    	mounted() {
+            let element = document.getElementById(this.name);
+
+            if(element.options[e.selectedIndex].value != null) {
+                this.updateValue(element.options[e.selectedIndex].value);
+            }
+    	},
 
         methods: {
             updateValue(value) {
