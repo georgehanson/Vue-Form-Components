@@ -51,8 +51,8 @@
     	mounted() {
             let element = document.getElementById(this.name);
 
-            if(element.options[e.selectedIndex].value != null) {
-                this.updateValue(element.options[e.selectedIndex].value);
+            if(element.options[element.selectedIndex].value != null) {
+                this.updateValue(element.options[element.selectedIndex].value);
             }
     	},
 
