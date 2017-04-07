@@ -54,8 +54,17 @@
             }
         },
 
+        mounted() {
+            console.log('mounted ' + this.options);
+        },
+
+        updated() {
+            console.log('updated ' + this.options);
+        },
+
         watch: {
             options(value) {
+                console.log('options updated');
                 let element = document.getElementById(this.name);
 
                 if(element.options[element.selectedIndex]) {
