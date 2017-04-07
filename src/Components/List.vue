@@ -54,19 +54,10 @@
             }
         },
 
-        mounted() {
-            console.log('mounted ' + this.options);
-        },
-
         updated() {
-            console.log('updated ' + this.options);
-        },
-
-        watch: {
-            options(value) {
-                console.log('options updated');
+            if(this.options.length) {
                 let element = document.getElementById(this.name);
-
+                console.log(element);
                 if(element.options[element.selectedIndex]) {
                     this.updateValue(element.options[element.selectedIndex].value);
                 }
