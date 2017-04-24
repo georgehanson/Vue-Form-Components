@@ -1,6 +1,6 @@
 <template>
     <div class="form-group" :class="{'has-error': showError }">
-        <label class="control-label" :class="{'col-sm-2': !stacked}">{{ label }}: <span v-if="required">*</span></label>
+        <label class="control-label" :class="{'col-sm-2': !stacked}" v-if="label">{{ label }}: <span v-if="required">*</span></label>
         <div :class="{'col-sm-10': !stacked}">
             <textarea :name="name" id="name" rows="5" v-on:input="updateValue($event.target.value)"
                       :value="value" class="form-control"></textarea>
@@ -18,8 +18,7 @@
                 required: true
             },
             label: {
-                type: String,
-                required: true
+                type: String
             },
             helper: String,
             showError: Boolean,
