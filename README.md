@@ -111,7 +111,7 @@ This component can be used in conjunction with the `v-model` directive.
 | Prop         | Type     | Default    | Required  | Description |
 | ------------ | -------  | ---------- | --------- | ----------- |
 | name         | String   |            | Yes       | The textarea name |
-| label        | String   |            | Yes       | The label for the textarea |
+| label        | String   |            | No       | The label for the textarea |
 | helper        | String  |            | No        | Helper text  |
 | showError    | Boolean  | false      | No        | Whether or not to show a validation error |
 | errorMessage | String   |            | No        | The error message to show |
