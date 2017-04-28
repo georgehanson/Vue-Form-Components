@@ -3,7 +3,7 @@
         <label class="control-label" :class="{'col-sm-2': !stacked}" v-if="label">{{ label }}: <span v-if="required">*</span></label>
         <div :class="{'col-sm-10': (!stacked && label)}">
             <select :name="name" :id="name" class="form-control" v-on:change="updateValue($event.target.value)">
-                <option value="" disabled readonly v-text="placeholder" v-if="placeholder"></option>
+                <option value="" disabled readonly v-text="placeholder" v-if="placeholder" :selected="value == null || value == ''"></option>
                 <option v-for="option in options" :value="option[keyName]" v-text="option[labelName]" :selected="option[keyName] == value"></option>
             </select>
 
