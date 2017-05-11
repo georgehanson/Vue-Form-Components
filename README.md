@@ -96,7 +96,7 @@ This component can be used in conjunction with the `v-model` directive.
 | Prop         | Type     | Default    | Required  | Description |
 | ------------ | -------  | ---------- | --------- | ----------- |
 | name         | String   |            | Yes       | The checkbox name |
-| label        | String   |            | Yes       | The label for the checkbox |
+| label        | String   |            | No       | The label for the checkbox |
 | helper        | String  |            | No        | Helper text  |
 | id           | String   |            | No        | The id for the checkbox |
 | stacked      | Boolean  | false      | No        | Show the label above the switch component
