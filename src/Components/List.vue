@@ -69,7 +69,7 @@
             slotExists(name) {
                 return (name in this.$slots);
             },
-            
+
             updateValue(value) {
                 this.$emit('input', value)
             }

@@ -124,6 +124,16 @@ This component can be used in conjunction with the `v-model` directive.
 This component generates a select input within a bootstrap form group. The name for this component is `Listcomponent`.
 This component can be used in conjunction with the `v-model` directive.
 
+#### Addons
+With the Select List component, you can also use input group addons. This can be done by simply adding slots.
+
+| Slot         | Description |
+| ------------ | ----------- |
+| leftAddon    | An addon on the left side of the input field |
+| rightAddon   | An addon on the right side of the input field |
+| leftBtn      | An input group button on the left side of the input field |
+| rightBtn     | An input group button on the right side of the input |
+
 | Prop         | Type     | Default    | Required  | Description |
 | ------------ | -------  | ---------- | --------- | ----------- |
 | name         | String   |            | Yes       | The select list name |
