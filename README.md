@@ -97,6 +97,7 @@ This component can be used in conjunction with the `v-model` directive.
 | ------------ | -------  | ---------- | --------- | ----------- |
 | name         | String   |            | Yes       | The checkbox name |
 | label        | String   |            | No       | The label for the checkbox |
+| labels        | Boolean | false      | No       | Show yes / no labels on the switch |
 | helper        | String  |            | No        | Helper text  |
 | id           | String   |            | No        | The id for the checkbox |
 | stacked      | Boolean  | false      | No        | Show the label above the switch component

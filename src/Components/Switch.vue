@@ -4,7 +4,10 @@
         <div :class="inputColumnClass">
             <label class="switch-component">
                 <input type="checkbox" :id="id" :name="name" :checked="checked" v-on:change="updateValue($event.target.checked)">
-                <div class="slider round"></div>
+                <div class="slider round">
+                    <span class="yes-label">Yes</span>
+                    <span class="no-label">No</span>
+                </div>
             </label>
             <p class="help-block" v-if="helper">{{ helper }}</p>
         </div>
@@ -21,6 +24,11 @@
             name: {
                 type: String,
                 required: true
+            },
+
+            labels: {
+                type: Boolean,
+                default: false
             },
 
             label: {
@@ -125,9 +133,24 @@
     /* Rounded sliders */
     .slider.round {
         border-radius: 34px;
+        display:flex;
+        align-items: center;
+        font-size: 11px;
+        justify-content: space-between;
     }
 
     .slider.round:before {
         border-radius: 50%;
+    }
+
+    .slider.round .yes-label {
+        padding-left: 5px;
+        color: #FFF;
+        text-transform: uppercase;
+    }
+
+    .slider.round .no-label {
+        padding-right: 7px;
+        text-transform: uppercase;
     }
 </style>
