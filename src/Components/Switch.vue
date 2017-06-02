@@ -5,8 +5,8 @@
             <label class="switch-component">
                 <input type="checkbox" :id="id" :name="name" :checked="checked" v-on:change="updateValue($event.target.checked)">
                 <div class="slider round">
-                    <span class="yes-label">Yes</span>
-                    <span class="no-label">No</span>
+                    <span class="yes-label" v-if="labels">Yes</span>
+                    <span class="no-label" v-if="labels">No</span>
                 </div>
             </label>
             <p class="help-block" v-if="helper">{{ helper }}</p>
