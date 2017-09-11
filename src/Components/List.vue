@@ -1,10 +1,10 @@
 <template>
     <div class="form-group" :class="{'has-error': showError, 'has-helper': helper, 'stacked': stacked }">
-        <div class="col-sm-4" :class="{'col-sm-4': !stacked}" v-if="label">
+        <div :class="{'col-sm-4': !stacked}" v-if="label">
             <label class="control-label">{{ label }}: <span v-if="required">*</span></label>
             <p class="help-block" v-text="helper" v-if="helper"></p>
         </div>
-        <div :class="{'col-sm-8': (!stacked && label)}">
+        <div class="control-container" :class="{'col-sm-8': (!stacked && label)}">
             <div :class="{'input-group': usingAddons}">
                 <div class="input-group-addon" v-if="slotExists('leftAddon')">
                     <slot name="leftAddon"></slot>
