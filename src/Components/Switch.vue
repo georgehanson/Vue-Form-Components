@@ -2,6 +2,7 @@
     <div class="form-group switch-group">
         <div :class="{'col-sm-4': ! stacked}" v-if="label">
             <label class="control-label">{{ label }}</label>
+            <p class="help-block" v-if="helper">{{ helper }}</p>
         </div>
         <div :class="{'col-sm-10': ! stacked  }">
             <label class="switch-component">
@@ -11,7 +12,6 @@
                     <span class="no-label" v-if="labels">No</span>
                 </div>
             </label>
-            <p class="help-block" v-if="helper">{{ helper }}</p>
         </div>
     </div>
 </template>
