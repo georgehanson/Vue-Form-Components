@@ -4,7 +4,7 @@
             <label class="control-label">{{ label }}</label>
             <p class="help-block" v-if="helper">{{ helper }}</p>
         </div>
-        <div :class="{'col-sm-10': ! stacked  }">
+        <div :class="{'col-sm-8': ! stacked  }">
             <label class="switch-component">
                 <input type="checkbox" :id="id" :name="name" :checked="checked" v-on:change="updateValue($event.target.checked)">
                 <div class="slider round">
