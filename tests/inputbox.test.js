@@ -37,4 +37,17 @@ describe('InputBoxComponent', () => {
         input.trigger('blur');
         expect(wrapper.vm.loseFocus).toHaveBeenCalled();
     });
+
+    test("it fires the input event", () => {
+        const wrapper = shallow(InputBoxComponent, {
+            props: {
+                name: 'name',
+                label: 'Name'
+            }
+        });
+        wrapper.vm.updateValue = jest.fn();
+        let input = wrapper.first('input');
+        input.trigger('input');
+        expect(wrapper.vm.updateValue).toHaveBeenCalled();
+    });
 });
