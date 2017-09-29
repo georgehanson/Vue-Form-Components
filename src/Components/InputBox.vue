@@ -13,7 +13,7 @@
                     <slot name="leftBtn"></slot>
                 </div>
 
-                <input :type="type" v-on:input="updateValue($event.target.value)" class="form-control" v-on:keyup.enter="enterKeyPressed"
+                <input :type="type" v-on:input="updateValue($event.target.value)" v-on:blur="loseFocus($event.target.value)" class="form-control" v-on:keyup.enter="enterKeyPressed"
                        :name="name" :id="id" :readonly="readonly" :value="value" :placeholder="placeholder">
 
                 <div class="input-group-addon" v-if="slotExists('rightAddon')">
@@ -67,7 +67,11 @@
             },
 
             updateValue(value) {
-                this.$emit('input', value)
+                this.$emit('input', value);
+            },
+
+            blur(value) {
+                this.$emit('blur', value);
             },
 
             slotExists(name) {
