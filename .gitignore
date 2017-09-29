@@ -3,3 +3,4 @@ index.html
 .idea
 dist
 npm-debug.log
+coverage
