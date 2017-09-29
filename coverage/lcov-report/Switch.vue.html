@@ -144,7 +144,50 @@
 99
 100
 101
-102</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -162,7 +205,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -245,13 +315,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
     &lt;div class="form-group switch-group"&gt;
-        &lt;label class="col-sm-2 control-label"&gt;{{ label }}&lt;/label&gt;
-        &lt;div class="col-sm-10"&gt;
+        &lt;div :class="{'col-sm-4': ! stacked}" v-if="label"&gt;
+            &lt;label class="control-label"&gt;{{ label }}&lt;/label&gt;
+            &lt;p class="help-block" v-if="helper"&gt;{{ helper }}&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div :class="{'col-sm-8': ! stacked  }"&gt;
             &lt;label class="switch-component"&gt;
                 &lt;input type="checkbox" :id="id" :name="name" :checked="checked" v-on:change="updateValue($event.target.checked)"&gt;
-                &lt;div class="slider round"&gt;&lt;/div&gt;
+                &lt;div class="slider round"&gt;
+                    &lt;span class="yes-label" v-if="labels"&gt;Yes&lt;/span&gt;
+                    &lt;span class="no-label" v-if="labels"&gt;No&lt;/span&gt;
+                &lt;/div&gt;
             &lt;/label&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -269,19 +361,40 @@
                 required: true
             },
 &nbsp;
-            label: {
-                type: String,
-                required: true
+            labels: {
+                type: Boolean,
+                default: false
             },
+&nbsp;
+            label: {
+                type: String
+            },
+&nbsp;
+            stacked: {
+                type: Boolean,
+                default: false
+            },
+&nbsp;
+            helper: String,
 &nbsp;
             id: String,
 &nbsp;
-            checked: Boolean
+            checked: Boolean,
+&nbsp;
+            labelColumn: {
+                type: String,
+                default: 'col-sm-2'
+            },
+&nbsp;
+            inputColumn: {
+                type: String,
+                default: 'col-sm-10'
+            }
         },
 &nbsp;
         methods: {
             updateValue(value) {
-                this.$emit('input', value)
+                this.$emit('change', value)
             }
         }
     };
@@ -341,18 +454,34 @@
     /* Rounded sliders */
     .slider.round {
         border-radius: 34px;
+        display:flex;
+        align-items: center;
+        font-size: 11px;
+        justify-content: space-between;
     }
 &nbsp;
     .slider.round:before {
         border-radius: 50%;
     }
-&lt;/style&gt;</pre></td></tr>
+&nbsp;
+    .slider.round .yes-label {
+        padding-left: 5px;
+        color: #FFF;
+        text-transform: uppercase;
+    }
+&nbsp;
+    .slider.round .no-label {
+        padding-right: 7px;
+        text-transform: uppercase;
+    }
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Mar 06 2017 10:44:41 GMT+0000 (GMT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Sep 29 2017 17:05:02 GMT+0100 (BST)
 </div>
 </div>
 <script src="prettify.js"></script>

@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1488797397846" clover="3.2.0">
-  <project timestamp="1488797397846" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0">
+<coverage generated="1506701102726" clover="3.2.0">
+  <project timestamp="1506701102726" name="All files">
+    <metrics statements="20" coveredstatements="15" conditionals="6" coveredconditionals="5" methods="12" coveredmethods="7" elements="38" coveredelements="27" complexity="0" loc="20" ncloc="20" packages="1" files="3" classes="3">
+      <file name="InputBox.vue" path="/home/gml/Projects/Vue-Form-Components/src/Components/InputBox.vue">
+        <metrics statements="12" coveredstatements="9" conditionals="6" coveredconditionals="5" methods="8" coveredmethods="5"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="73" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="88" count="8" type="stmt"/>
+      </file>
+      <file name="Switch.vue" path="/home/gml/Projects/Vue-Form-Components/src/Components/Switch.vue">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+      </file>
+      <file name="TextArea.vue" path="/home/gml/Projects/Vue-Form-Components/src/Components/TextArea.vue">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+      </file>
     </metrics>
   </project>
 </coverage>
