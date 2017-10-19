@@ -7,3 +7,7 @@ npm-debug.log
 tests
 jest
 coverage
+.tmp
+.nyc_output
+yarn-error.log
+yarn.lock

@@ -1,0 +1,5 @@
+<div class="form-group">
+    <label v-if="label">{{ label }}<span class="required" v-if="required">*</span></label>
+    <input :type="type" :class="inputClasses" :name="name" :placeholder="placeholder" :readonly="readonly" :required="required">
+    <small class="form-text text-muted" v-if="helper" v-text="helper"></small>
+</div>

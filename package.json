@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/georgehanson/Vue-Form-Components.git"
   },
+  "scripts": {
+    "test": "mocha-webpack --webpack-config webpack.test.config.js --require tests/setup.ts tests/*.spec.ts",
+    "test:watch": "mocha-webpack --webpack-config webpack.test.config.js --watch --require tests/setup.ts tests/*.spec.ts"
+  },
   "keywords": [
     "vue2",
     "vue",
@@ -20,4 +24,27 @@
     "url": "https://github.com/georgehanson/Vue-Form-Components/issues"
   },
   "homepage": "https://github.com/georgehanson/Vue-Form-Components#readme",
+  "devDependencies": {
+    "@types/node": "^8.0.45",
+    "avoriaz": "^6.0.1",
+    "expect": "^21.2.1",
+    "html-loader": "^0.5.1",
+    "jsdom": "^11.3.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^4.0.1",
+    "mocha-typescript": "^1.1.11",
+    "mocha-webpack": "^0.7.0",
+    "ts-loader": "^3.0.3",
+    "typescript": "^2.5.3",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
+    "vue": "^2.5.2",
+    "vue-class-component": "^6.0.0",
+    "vue-loader": "^13.3.0",
+    "vue-property-decorator": "^6.0.0",
+    "vue-template-compiler": "^2.5.2",
+    "vue-test-utils": "^1.0.0-beta.2",
+    "webpack": "^3.8.1",
+    "webpack-node-externals": "^1.6.0",
+    "webpack-notifier": "^1.5.0"
+  }
 }

@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "module": "es2015",
+        "target": "es2015",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "removeComments": true,
+        "isolatedModules": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "noImplicitUseStrict": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "pretty": true,
+    },
+    "lib": [
+        "dom",
+        "es5",
+        "es2015.promise"
+    ],
+}

@@ -3,3 +3,7 @@ index.html
 .idea
 dist
 npm-debug.log
+.tmp
+.nyc_output
+yarn-error.log
+yarn.lock
