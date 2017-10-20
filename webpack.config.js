@@ -34,7 +34,7 @@ module.exports = {
                     }
                 }]
                 ],
-                plugins: ['transform-object-rest-spread']
+                plugins: ['transform-decorators-legacy', 'transform-object-rest-spread']
             }
         },
         {
