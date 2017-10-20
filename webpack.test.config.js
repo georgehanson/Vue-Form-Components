@@ -3,8 +3,13 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: 'ts-loader',
+                loader: ['ts-loader'],
                 exclude: /node_modules/,
+            },
+            {
+                test: /\.jsx?$/,
+                loader: 'babel-loader',
+                exclude: /node-modules/
             },
             {
                 test: /\.html$/,
@@ -20,7 +25,7 @@ module.exports = {
 
     resolve: {
         alias: {
-            vue: 'vue/dist/vue.js'
+            vue: 'vue/dist/vue.esm.js'
         }
     }
 };
