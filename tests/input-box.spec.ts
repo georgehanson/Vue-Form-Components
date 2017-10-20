@@ -480,7 +480,6 @@ suite("InputBox", () => {
             }
         });
 
-        expect(wrapper.first('.form-control').hasAttribute('value')).toBe(true);
-        expect(wrapper.first('.form-control').getAttribute('value')).toBe('test');
+        expect(wrapper.first('.form-control').value()).toBe('test');
     });
 });
