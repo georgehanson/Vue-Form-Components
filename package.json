@@ -37,6 +37,7 @@
     "mocha": "^4.0.1",
     "mocha-typescript": "^1.1.11",
     "mocha-webpack": "^0.7.0",
+    "sinon": "^4.0.1",
     "ts-loader": "^3.0.3",
     "typescript": "^2.5.3",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
