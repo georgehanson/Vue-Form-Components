@@ -10,8 +10,18 @@ module.exports = {
             test: /\.jsx?$/,
             loader: 'babel-loader',
             exclude: /node_modules/,
-            query: {
-                presets: ['es2015']
+            options: {
+                cacheDirectory: true,
+                presets: [
+                ['env', {
+                    'modules': false,
+                    'targets': {
+                        'browsers': ['> 2%'],
+                        uglify: true
+                    }
+                }]
+                ],
+                plugins: ['transform-object-rest-spread']
             }
         },
         {

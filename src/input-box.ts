@@ -1,7 +1,7 @@
 import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-property-decorator'
 
 @Component({
-    template: require('./templates/input-box.html')
+    template: require('./templates/input-box.html'),
 })
 export default class InputBox extends Vue {
     @Prop([String])

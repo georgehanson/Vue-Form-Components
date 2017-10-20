@@ -214,9 +214,21 @@ suite("InputBox", () => {
         });
 
         expect(wrapper.find('.col-sm-4').length).toBe(1);
+        expect(wrapper.first('.form-group').hasClass('row')).toBe(true);
         expect(wrapper.first('.col-sm-4').contains('label')).toBe(true);
         expect(wrapper.first('label').hasClass('col-form-label')).toBe(true);
         expect(wrapper.find('.col-sm-8').length).toBe(1);
+    });
+
+    test("if the input is not inline, it does not have the row class", () => {
+        let wrapper: any = mount(InputBox, {
+            propsData: {
+                name: 'username',
+                label: 'My Label',
+            }
+        });
+
+        expect(wrapper.first('.form-group').hasClass('row')).toBe(false);
     });
 
     test("the field can be marked as invalid", () => {
