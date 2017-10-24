@@ -4,6 +4,10 @@ import Component from 'vue-class-component';
 @Component({
     template: require('./templates/input-box.html'),
     props: {
+        name: {
+            type: String,
+            required: true
+        },
         label: {
             type: String,
             required: false
@@ -11,10 +15,6 @@ import Component from 'vue-class-component';
         placeholder: {
             type: String,
             required: false
-        },
-        name: {
-            type: String,
-            required: true
         },
         type: {
             type: String,

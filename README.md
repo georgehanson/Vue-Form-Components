@@ -1,32 +1,26 @@
 # Vue Form Components
 
+[![Build Status](https://travis-ci.org/GeorgeHanson/vue-form-components.svg?branch=master)](https://travis-ci.org/GeorgeHanson/vue-form-components)
 [![npm version](https://badge.fury.io/js/vue-form-components.svg)](https://badge.fury.io/js/vue-form-components)
 [![npm](https://img.shields.io/npm/dt/vue-form-components.svg)](https://www.npmjs.com/package/vue-form-components)
 
-This package provides easy form wrappers for Vue2, based upon the [Bootstrap v3](https://getbootstrap.com/) CSS Framework.
+This package provides easy form wrappers for Vue2, based upon the [Bootstrap v4](https://getbootstrap.com/) CSS Framework.
 
-The following components which are supported are:
+There are a variety of components that this package provides. These are:
 
-- Standard Input Box (Including input addons)
-- Toggle Switch
+- Standard Input Box
 - Text Area
 - Select List
+- Toggle Switch
+- File Browser
 
 ## Installation
 
-You can install this package by running the following command: `npm install --save vue-form-components`
+You can install this package by running the following command: `npm install --save vue-form-components` or `yarn add vue-form-components`
 
-You can then import this package into your project using one of the following:
+You can then import this package into your project.
 
 `Import VueFormComponents from 'vue-form-components'`
-
-Or
-
-`require('vue-form-components')`
-
-If you would just like to import one or selected components, you can do the following:
-
-`Import { InputBoxComponent } from 'vue-form-components'`
 
 ## Usage
 
@@ -34,20 +28,16 @@ I recommend when using this package to declare the components as global componen
 
 ```javascript
 Import VueFormComponents from 'vue-form-components';
-Vue.component('input-box', VueFormComponents.InputBoxComponent);
+Vue.component('input-box', VueFormComponents.InputBox);
 ```
-Or
-```javascript
-const VueFormComponents  = require('vue-form-components');
-Vue.component('input-box', VueFormComponents.InputBoxComponent);
-```
-
-You can then use these components globally throughout your application.
 
 ### Standard Input Box
 
-This component is designed to save time and repetition by not having to duplicate form groups. The name for this
-component is `InputBoxComponent`. This component can be used in conjunction with the `v-model` directive.
+This component is designed to save time and repetition by not having to duplicate form groups. The name for this component is `InputBox`. This component can be used in conjunction with the `v-model` directive. Below is an example of how you might use the component:
+
+```html
+<input-box name="email" type="email" label="Your Email" helper="Please enter your email address" v-model="email"></input-box>
+```
 
 #### Addons
 With the Standard input box component, you can also use input group addons. This can be done by simply adding slots.
@@ -56,8 +46,8 @@ With the Standard input box component, you can also use input group addons. This
 | ------------ | ----------- |
 | leftAddon    | A standard input group addon on the left side of the input field |
 | rightAddon   | A standard input group addon on the right side of the input field |
-| leftBtn      | An input group button on the left side of the input field |
-| rightBtn     | An input group button on the right side of the input |
+| leftButton      | An input group button on the left side of the input field |
+| rightButton     | An input group button on the right side of the input |
 
 For example, if I wanted to create an input box, with an addon on the right hand side, I could do the following:
 
@@ -71,7 +61,7 @@ Alternatively, for a button on the right hand side, I could do the following:
 
 ```html
 <input-box v-model="model" name="email_address" label="Email Address">
-    <button slot="rightBtn" class="btn btn-default">Search</button>
+    <button slot="rightButton" class="btn btn-default">Search</button>
 </input-box>
 ```
 
@@ -80,18 +70,21 @@ Alternatively, for a button on the right hand side, I could do the following:
 | name         | String   |            | Yes       | The input name for the field |
 | label        | String   |            | No       | The label for the input |
 | helper        | String  |            | No        | Helper text  |
-| showError    | Boolean  | false      | No        | Whether or not to show a validation error |
+| invalid    | Boolean  | false      | No        | Whether or not to show a validation error |
 | errorMessage | String   |            | No        | The error message to show |
 | placeholder  | String   |            | No        | A placeholder for the input |
-| stacked      | Boolean  | false      | No        | Show the label above the input field |
+| inline      | Boolean  | false      | No        | Show the label next to the input |
 | type         | String   | text       | No        | The HTML input type |
 | required     | Boolean  | false      | No        | Mark the field as required |
 | readonly     | Boolean  | false      | No        | Mark the field as readonly |
-| id           | String   |            | No        | The id for the html input |
+| small        | Boolean  | false      | No        | Show a small input |
+| large        | Boolean  | false      | No        | Show a large input |
+| plainText    | Boolean  | false      | No        | Show a plain text input |
+| metaUnderLabel | Boolean  | false      | No        | Show the meta details under the label instead of the input |
 
 ### Toggle Switch
 
-This component displays a nice alternative to a standard checkbox. The name for this component is `SwitchComponent`.
+This component displays a nice alternative to a standard checkbox. The name for this component is `ToggleSwitch`.
 This component can be used in conjunction with the `v-model` directive.
 
 | Prop         | Type     | Default    | Required  | Description |
@@ -107,7 +100,7 @@ This component can be used in conjunction with the `v-model` directive.
 
 ### Text Area
 
-This component generates a textarea within a bootstrap form group. The name for this component is `TextAreaComponent`.
+This component generates a textarea within a bootstrap form group. The name for this component is `TextArea`.
 This component can be used in conjunction with the `v-model` directive.
 
 | Prop         | Type     | Default    | Required  | Description |
@@ -123,7 +116,7 @@ This component can be used in conjunction with the `v-model` directive.
 
 ### Select List
 
-This component generates a select input within a bootstrap form group. The name for this component is `Listcomponent`.
+This component generates a select input within a bootstrap form group. The name for this component is `SelectList`.
 This component can be used in conjunction with the `v-model` directive.
 
 #### Addons
@@ -148,3 +141,6 @@ With the Select List component, you can also use input group addons. This can be
 | errorMessage | String   |            | No        | The error message to show |
 | stacked      | Boolean  | false      | No        | Show the label above the textarea |
 | required     | Boolean  | false      | No        | Mark the field as required |
+
+
+More docs coming soon
