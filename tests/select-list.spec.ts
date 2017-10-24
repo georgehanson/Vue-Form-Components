@@ -50,12 +50,11 @@ suite("SelectList", () => {
         let wrapper: any = mount(SelectList, {
             propsData: {
                 name: 'title',
-                placeholder: 'My Placeholder'
+                placeholder: 'My Placeholder',
+                value: ''
             }
         });
         expect(wrapper.find('option').length).toBe(1);
-        expect(wrapper.first('option').hasAttribute('selected')).toBe(true);
-        expect(wrapper.first('option').hasAttribute('disabled')).toBe(true);
         expect(wrapper.first('option').value()).toBe('My Placeholder');
     });
 
