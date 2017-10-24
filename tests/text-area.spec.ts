@@ -1,13 +1,13 @@
 import { suite, test, slow, timeout } from "mocha-typescript";
 import {mount} from "avoriaz";
-import SelectList from "./../src/text-area.ts";
+import TextArea from "./../src/text-area.ts";
 import expect from 'expect';
 import {StandardSlot} from "./resources.ts";
 import sinon from 'sinon';
 
 suite("TextArea", () => {
     test("it can set the name", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message'
             }
@@ -18,7 +18,7 @@ suite("TextArea", () => {
     });
 
     test("the label gets output", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Input'
@@ -29,7 +29,7 @@ suite("TextArea", () => {
     });
 
     test("if no label is specified it does not show it", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message'
             }
@@ -38,7 +38,7 @@ suite("TextArea", () => {
     });
 
     test("if no placeholder is specified it does not show one", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message'
             }
@@ -47,7 +47,7 @@ suite("TextArea", () => {
     });
 
     test("if a placeholder is specified it shows one", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 placeholder: 'My Placeholder'
@@ -59,7 +59,7 @@ suite("TextArea", () => {
     });
 
     test("if no helper is provided it does not show one", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
             }
@@ -69,7 +69,7 @@ suite("TextArea", () => {
     });
 
     test("if helper text is provided it does show it", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 helper: 'Please select a message'
@@ -82,7 +82,7 @@ suite("TextArea", () => {
     });
 
     test("if the field is not required it does not have the required attributes", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
             }
@@ -93,7 +93,7 @@ suite("TextArea", () => {
     });
 
     test("if the field is required it have the required attributes", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'Your Email',
@@ -107,7 +107,7 @@ suite("TextArea", () => {
     });
 
     test("if the input is required but no label has been specified the input field has the required attribute", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 required: true
@@ -118,7 +118,7 @@ suite("TextArea", () => {
     });
 
     test("the input can have the readonly attribute", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 readonly: true,
@@ -129,7 +129,7 @@ suite("TextArea", () => {
     });
 
     test("by default the input does not have a readonly attribute", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message'
             }
@@ -139,7 +139,7 @@ suite("TextArea", () => {
     });
 
     test("by default the class for the input is form-control", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message'
             }
@@ -149,7 +149,7 @@ suite("TextArea", () => {
     });
 
     test("the form-control can be large", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 large: true
@@ -161,7 +161,7 @@ suite("TextArea", () => {
     });
 
     test("the form-control can be small", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 small: true
@@ -173,7 +173,7 @@ suite("TextArea", () => {
     });
 
     test("the input can be inline", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Label',
@@ -189,7 +189,7 @@ suite("TextArea", () => {
     });
 
     test("if the input is not inline, it does not have the row class", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Label',
@@ -200,7 +200,7 @@ suite("TextArea", () => {
     });
 
     test("the field can be marked as invalid", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Label',
@@ -215,7 +215,7 @@ suite("TextArea", () => {
     });
 
     test("the field does not show invalid feedback if it has not been marked as invalid", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Label',
@@ -228,7 +228,7 @@ suite("TextArea", () => {
     });
 
     test("the field does not show invalid feedback if no message has been passed", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Label',
@@ -241,7 +241,7 @@ suite("TextArea", () => {
     });
 
     test("the helper text can be placed under the label", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Label',
@@ -256,7 +256,7 @@ suite("TextArea", () => {
     });
 
     test("the error text can be placed under the label", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Label',
@@ -273,7 +273,7 @@ suite("TextArea", () => {
     });
 
     test("it emits an event on input", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Label'
@@ -285,7 +285,7 @@ suite("TextArea", () => {
     });
 
     test("it emits an event on enter key", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Label'
@@ -297,7 +297,7 @@ suite("TextArea", () => {
     });
 
     test("the value of the textarea can be set", () => {
-        let wrapper: any = mount(SelectList, {
+        let wrapper: any = mount(TextArea, {
             propsData: {
                 name: 'message',
                 label: 'My Label',

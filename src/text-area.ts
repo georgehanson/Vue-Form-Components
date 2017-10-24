@@ -16,11 +16,6 @@ import Component from 'vue-class-component';
             type: String,
             required: true
         },
-        type: {
-            type: String,
-            default: 'text',
-            required: false
-        },
         helper: {
             type: String,
             required: false
@@ -41,11 +36,6 @@ import Component from 'vue-class-component';
             required: false
         },
         large: {
-            type: Boolean,
-            default: false,
-            required: false
-        },
-        plainText: {
             type: Boolean,
             default: false,
             required: false
