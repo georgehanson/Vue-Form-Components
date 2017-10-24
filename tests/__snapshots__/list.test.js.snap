@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListComponent it generates the markup 1`] = `
+< div data - server - rendered = "true"
+class = "form-group" > < div class = "col-sm-4" > < label class = "control-label" > Please select a choice: <!----></label> <!----></div> <div class="control-container col-sm-8"><div><!----> <!----> <select name="choices" id="choices" class="form-control"><!----> <option selected="selected"></option><option selected="selected"></option><option selected="selected"></option></select> <!----> <!----></div> <!----></div> <div class="clearfix"></div></div>
+`;
