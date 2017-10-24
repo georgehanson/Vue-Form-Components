@@ -1,54 +1,83 @@
-import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-property-decorator'
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
 @Component({
     template: require('./templates/input-box.html'),
+    props: {
+        label: {
+            type: String,
+            required: false
+        },
+        placeholder: {
+            type: String,
+            required: false
+        },
+        name: {
+            type: String,
+            required: true
+        },
+        type: {
+            type: String,
+            default: 'text',
+            required: false
+        },
+        helper: {
+            type: String,
+            required: false
+        },
+        required: {
+            type: Boolean,
+            default: false,
+            required: false
+        },
+        readonly: {
+            type: Boolean,
+            default: false,
+            required: false
+        },
+        small: {
+            type: Boolean,
+            default: false,
+            required: false
+        },
+        large: {
+            type: Boolean,
+            default: false,
+            required: false
+        },
+        plainText: {
+            type: Boolean,
+            default: false,
+            required: false
+        },
+        inline: {
+            type: Boolean,
+            default: false,
+            required: false
+        },
+        invalid: {
+            type: Boolean,
+            default: false,
+            required: false
+        },
+        errorMessage: {
+            type: String,
+            required: false,
+            default: null
+        },
+        metaUnderLabel: {
+            type: Boolean,
+            default: false,
+            required: false
+        },
+        value: {
+            type: String,
+            default: null,
+            required: false
+        }
+    }
 })
 export default class InputBox extends Vue {
-    @Prop([String])
-    public label: string;
-
-    @Prop([String])
-    public placeholder: string;
-
-    @Prop({type: String, required: true})
-    public name: string;
-
-    @Prop({type: String, default: 'text'})
-    public type: string;
-
-    @Prop({type: String})
-    public helper: string;
-
-    @Prop({type: Boolean, default: false})
-    public required: boolean;
-
-    @Prop({type: Boolean, default: false})
-    public readonly: boolean;
-
-    @Prop({type: Boolean, default: false})
-    public small: boolean;
-
-    @Prop({type: Boolean, default: false})
-    public large: boolean;
-
-    @Prop({type: Boolean, default: false})
-    public plainText: boolean;
-
-    @Prop({type: Boolean, default: false})
-    public inline: boolean;
-
-    @Prop({type: Boolean, default: false})
-    public invalid: boolean;
-
-    @Prop({type: String, default: null})
-    public errorMessage: string;
-
-    @Prop({type: Boolean, default: false})
-    public metaUnderLabel: boolean;
-
-    @Prop({type: String, default: null})
-    public value: string;
-
     /**
      * The classes for the input field
      * @return {string[]}
@@ -56,19 +85,19 @@ export default class InputBox extends Vue {
      get inputClasses(): any[] {
          let initialArray = ['form-control'];
 
-         if (this.large && ! this.usingAddons) {
+         if (this.$props.large && ! this.usingAddons) {
              initialArray.push('form-control-lg');
          }
 
-         if (this.small && ! this.usingAddons) {
+         if (this.$props.small && ! this.usingAddons) {
              initialArray.push('form-control-sm');
          }
 
-         if (this.plainText) {
+         if (this.$props.plainText) {
              initialArray[0] += '-plaintext';
          }
 
-         if (this.invalid) {
+         if (this.$props.invalid) {
              initialArray.push('is-invalid');
          }
 
