@@ -1,16 +1,15 @@
 {
   "name": "vue-form-components",
-  "version": "1.3.9",
+  "version": "2.0.1",
   "description": "A collection of bootstrap form components for Vue 2",
   "main": "dist/build.js",
-  "scripts": {
-    "test": "jest --coverage",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/georgehanson/Vue-Form-Components.git"
+  },
+  "scripts": {
+    "test": "mocha-webpack --webpack-config=\"webpack.test.config.js\" --require=\"tests/setup.ts\" tests/**/*.spec.ts",
+    "test:watch": "mocha-webpack --webpack-config=\"webpack.test.config.js\" --watch --require=\"tests/setup.ts\" tests/**/*.spec.ts"
   },
   "keywords": [
     "vue2",
@@ -25,46 +24,41 @@
     "url": "https://github.com/georgehanson/Vue-Form-Components/issues"
   },
   "homepage": "https://github.com/georgehanson/Vue-Form-Components#readme",
-  "dependencies": {
-    "vue": "^2.2.1"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "vue"
-    ],
-    "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
-    },
-    "snapshotSerializers": [
-      "<rootDir>/jest/htmlSnapshotBeautifier.js"
-    ]
-  },
   "devDependencies": {
-    "avoriaz": "^4.2.0",
-    "babel-cli": "^6.23.0",
-    "babel-core": "^6.0.0",
-    "babel-jest": "^19.0.0",
-    "babel-loader": "^6.0.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-latest": "^6.0.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "cross-env": "^3.0.0",
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.9.0",
-    "jest": "^19.0.2",
-    "jest-vue-preprocessor": "^0.1.3",
-    "js-beautify": "^1.6.11",
-    "node-sass": "^4.5.0",
-    "sass-loader": "^5.0.1",
-    "vue": "^2.2.1",
-    "vue-loader": "^11.1.4",
-    "vue-server-renderer": "^2.2.1",
-    "vue-template-compiler": "^2.2.1",
-    "vue-template-es2015-compiler": "^1.5.1",
-    "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "@types/node": "^8.0.45",
+    "avoriaz": "^6.0.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "expect": "^21.2.1",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "html-loader": "^0.5.1",
+    "jsdom": "^11.3.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^4.0.1",
+    "mocha-typescript": "^1.1.11",
+    "mocha-webpack": "^0.7.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "sinon": "^4.0.1",
+    "ts-loader": "^3.0.3",
+    "typescript": "^2.5.3",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
+    "vue": "^2.5.2",
+    "vue-loader": "^13.3.0",
+    "vue-property-decorator": "^6.0.0",
+    "vue-template-compiler": "^2.5.2",
+    "vue-test-utils": "^1.0.0-beta.2",
+    "webpack": "^3.8.1",
+    "webpack-node-externals": "^1.6.0",
+    "webpack-notifier": "^1.5.0"
+  },
+  "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "vue": "^2.5.2",
+    "vue-class-component": "^6.0.0"
   }
 }

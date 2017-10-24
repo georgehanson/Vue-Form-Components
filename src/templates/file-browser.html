@@ -1,0 +1,15 @@
+<div class="form-group" :class="{'has-helper': helper, 'row': inline}">
+    <div :class="{'col-sm-4': inline}">
+        <label v-if="label" :class="{'col-form-label': inline }">{{ label }}<span class="required" v-if="required">*</span></label>
+        <small class="form-text text-muted" v-if="helper && inline && metaUnderLabel" v-text="helper"></small>
+        <div class="invalid-feedback d-block" v-text="errorMessage" v-if="invalid && inline && metaUnderLabel"></div>
+    </div>
+    <div :class="{'col-sm-8': inline}">
+        <label class="custom-file">
+            <input type="file" :name="name" class="custom-file-input" v-on:change.prevent="fileSelected">
+            <span class="custom-file-control"></span>
+        </label>
+        <small class="form-text text-muted" v-if="helper && ! metaUnderLabel" v-text="helper"></small>
+        <div class="invalid-feedback" v-text="errorMessage" v-if="invalid && ! metaUnderLabel"></div>
+    </div>
+</div>

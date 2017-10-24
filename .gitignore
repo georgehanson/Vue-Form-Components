@@ -4,3 +4,7 @@ index.html
 dist
 npm-debug.log
 coverage
+.tmp
+.nyc_output
+yarn-error.log
+yarn.lock

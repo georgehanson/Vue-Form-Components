@@ -1,6 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`InputBoxComponent it generates the markup 1`] = `
-< div data - server - rendered = "true"
-class = "form-group" > < div class = "col-sm-4" > < label class = "control-label" > Name: <!----></label> <!----></div> <div class="control-container col-sm-8"><div><!----> <!----> <input type="text" name="name" class="form-control"> <!----> <!----></div> <!----></div> <div class="clearfix"></div></div>
-`;

@@ -1,18 +1,4 @@
-let webpack = require('webpack');
-let path = require('path');
-let UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-let nodeExternals = require('webpack-node-externals');
-let ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 module.exports = {
-    entry: ['./src/index.ts', './src/vue-form-components.scss'],
-
-    output: {
-        path: path.resolve(__dirname, 'dist/'),
-        filename: 'build.js',
-        publicPath: './dist'
-    },
-
     module: {
         rules: [
         {
@@ -35,7 +21,7 @@ module.exports = {
                     }
                 }]
                 ],
-                plugins: ['transform-decorators-legacy', 'transform-object-rest-spread']
+                plugins: ['transform-object-rest-spread']
             }
         },
         {
@@ -46,26 +32,13 @@ module.exports = {
         {
             test: /\.vue$/,
             use: 'vue-loader'
-        },
-        {
-            test: /\.(sass|scss)$/,
-            loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
         }
         ]
     },
 
     resolve: {
         alias: {
-            vue: 'vue/dist/vue.js'
+            vue: 'vue/dist/vue.esm.js'
         }
-    },
-
-    externals: [nodeExternals()],
-
-    plugins: [
-        new ExtractTextPlugin({ // define where to save the file
-          filename: '[name].css',
-          allChunks: true,
-      }),
-    ]
+    }
 };

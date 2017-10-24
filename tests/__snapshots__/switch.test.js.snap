@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`SwitchComponent it generates the markup 1`] = `
-< div data - server - rendered = "true"
-class = "form-group switch-group" > < div class = "col-sm-4" > < label class = "control-label" > Would you like to receive marketing updates ? < /label> <!----></div > < div class = "col-sm-8" > < label class = "switch-component" > < input type = "checkbox"
-name = "marketing" > < div class = "slider round" > <!----> <!----></div></label></div></div>
-`;

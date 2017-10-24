@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "module": "es2015",
+        "target": "es2015",
+        "moduleResolution": "node",
+        "removeComments": true,
+        "isolatedModules": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "noImplicitUseStrict": false,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "pretty": true,
+        "outDir": "build",
+        "allowSyntheticDefaultImports": true,
+        "lib": [
+          "dom",
+          "es2015"
+      ],
+    },
+    "types": [
+        "node"
+    ],
+    "exclude": [
+        "node_modules/*",
+        "tests"
+    ],
+    "files": [
+        "src/index.ts"
+    ]
+
+}
