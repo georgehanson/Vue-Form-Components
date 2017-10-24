@@ -8,8 +8,8 @@
     "url": "git+https://github.com/georgehanson/Vue-Form-Components.git"
   },
   "scripts": {
-    "test": "mocha-webpack --webpack-config=\"webpack.test.config.js\" --require=\"tests/setup.ts\" tests/*.spec.ts",
-    "test:watch": "mocha-webpack --webpack-config=\"webpack.test.config.js\" --watch --require=\"tests/setup.ts\" tests/*.spec.ts"
+    "test": "mocha-webpack --webpack-config=\"webpack.test.config.js\" --require=\"tests/setup.ts\" tests/**/*.spec.ts",
+    "test:watch": "mocha-webpack --webpack-config=\"webpack.test.config.js\" --watch --require=\"tests/setup.ts\" tests/**/*.spec.ts"
   },
   "keywords": [
     "vue2",
