@@ -12,7 +12,7 @@
             <slot name="leftButton"></slot>
         </span>
         <select :name="name" :required="required" :disabled="disabled" :class="inputClasses" v-on:change="updateValue($event.target.value)" :value="value">
-            <option v-if="placeholder" v-text="placeholder" disabled selected></option>
+            <option v-if="placeholder" value="" v-text="placeholder" disabled></option>
             <option v-for="option in options" :value="option[keyName]">{{ option[labelName] }}</option>
         </select>
         <span v-if="slotExists('rightAddon')" class="input-group-addon">
