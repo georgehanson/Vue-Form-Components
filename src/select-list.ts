@@ -136,8 +136,4 @@ export default class SelectList extends Vue {
       public updateValue(value): void {
           this.$emit('input', value);
       }
-
-      public optionIsSelected(option: any): boolean {
-          return true;
-      }
   }

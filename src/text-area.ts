@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Component from 'vue-class-component';
 
 @Component({
-    template: require('./templates/input-box.html'),
+    template: require('./templates/text-area.html'),
     props: {
         label: {
             type: String,
@@ -85,11 +85,11 @@ export default class TextArea extends Vue {
      get inputClasses(): any[] {
          let initialArray = ['form-control'];
 
-         if (this.$props.large && ! this.usingAddons) {
+         if (this.$props.large) {
              initialArray.push('form-control-lg');
          }
 
-         if (this.$props.small && ! this.usingAddons) {
+         if (this.$props.small) {
              initialArray.push('form-control-sm');
          }
 
@@ -102,24 +102,6 @@ export default class TextArea extends Vue {
          }
 
          return initialArray;
-     }
-
-     /**
-      * Check if any add-ons are being used
-      *
-      * @return {boolean}
-      */
-     get usingAddons(): boolean {
-         return ! (Object.keys(this.$slots).length === 0 && this.$slots.constructor === Object)
-     }
-
-     /**
-      * Check to see if a slot exists
-      * @param  {string}  name [description]
-      * @return {boolean}      [description]
-      */
-     public slotExists(name: string): boolean {
-        return (name in this.$slots);
      }
 
      /**
