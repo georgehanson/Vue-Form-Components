@@ -1,7 +1,7 @@
 <template>
     <div class="form-group" :class="{'has-error': showError }">
-        <div class="col-sm-4" :class="{'col-sm-4': !stacked}" v-if="label">
-            <label class="control-label">{{ label }}: <span v-if="required">*</span></label>
+        <div class="col-sm-4" :class="{'col-sm-4': !stacked}" v-if="label || showLabelSpace">
+            <label class="control-label" v-if="label">{{ label }}: <span v-if="required">*</span></label>
             <p class="help-block" v-text="helper" v-if="helper"></p>
         </div>
         <div :class="{'col-sm-8': (!stacked && label)}">
@@ -52,7 +52,8 @@
             required: Boolean,
             readonly: Boolean,
             id: String,
-            errorMessage: String
+            errorMessage: String,
+            showLabelSpace: Boolean
         },
 
         computed: {
