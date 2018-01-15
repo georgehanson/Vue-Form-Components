@@ -4,7 +4,7 @@
             <label class="control-label" v-if="label">{{ label }}: <span v-if="required">*</span></label>
             <p class="help-block" v-text="helper" v-if="helper"></p>
         </div>
-        <div :class="{'col-sm-8': (!stacked && label)}">
+        <div :class="{'col-sm-8': (!stacked && (label || showLabelSpace))}">
             <div :class="{'input-group': usingAddons}">
                 <div class="input-group-addon" v-if="slotExists('leftAddon')">
                     <slot name="leftAddon"></slot>
