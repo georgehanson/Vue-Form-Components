@@ -1,6 +1,6 @@
 <template>
     <div class="form-group" :class="{'has-error': showError }">
-        <div class="col-sm-4" :class="{'col-sm-4': !stacked}" v-if="label || showLabelSpace">
+        <div :class="{'col-sm-4': !stacked}" v-if="label || showLabelSpace">
             <label class="control-label" v-if="label">{{ label }}: <span v-if="required">*</span></label>
             <p class="help-block" v-text="helper" v-if="helper"></p>
         </div>
