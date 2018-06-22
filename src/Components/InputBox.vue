@@ -14,7 +14,7 @@
                 </div>
 
                 <input :type="type" v-on:input="updateValue($event.target.value)" class="form-control" v-on:keyup.enter="enterKeyPressed"
-                       :name="name" :id="id" :readonly="readonly" :value="value" :placeholder="placeholder">
+                       :name="name" :id="id" :readonly="readonly" :value="value" :placeholder="placeholder" v-on:paste="attemptToPasteValue">
 
                 <div class="input-group-addon" v-if="slotExists('rightAddon')">
                     <slot name="rightAddon"></slot>
@@ -53,7 +53,8 @@
             readonly: Boolean,
             id: String,
             errorMessage: String,
-            showLabelSpace: Boolean
+            showLabelSpace: Boolean,
+            preventPasting: Boolean
         },
 
         computed: {
@@ -63,6 +64,16 @@
         },
 
         methods: {
+            attemptToPasteValue(event) {
+                event.preventDefault();
+
+                if (! this.preventPasting) {
+                    return true;
+                }
+
+                return false;
+            },
+
             enterKeyPressed() {
                 this.$emit('enter');
             },
