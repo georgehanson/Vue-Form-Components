@@ -54,7 +54,12 @@
             id: String,
             errorMessage: String,
             showLabelSpace: Boolean,
-            preventPasting: Boolean
+            preventPasting: {
+                type: Boolean,
+                default () {
+                    return false;
+                }
+            }
         },
 
         computed: {
@@ -65,8 +70,6 @@
 
         methods: {
             attemptToPasteValue(event) {
-                event.preventDefault();
-
                 if (! this.preventPasting) {
                     return true;
                 }
