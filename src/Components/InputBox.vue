@@ -74,6 +74,8 @@
                     return true;
                 }
 
+                event.preventDefault();
+                
                 return false;
             },
 
