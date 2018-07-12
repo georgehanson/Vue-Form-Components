@@ -12,7 +12,7 @@
                 <div class="input-group-btn" v-if="slotExists('leftBtn')">
                     <slot name="leftBtn"></slot>
                 </div>
-                <select :name="name" :id="name" class="form-control" v-on:change="updateValue($event.target.value)">
+                <select :name="name" :id="name" class="form-control" v-on:change="updateValue($event.target.value)" :disabled="disabled">
                     <option value="" disabled readonly v-text="placeholder" v-if="placeholder"
                             :selected="value == null || value == ''"></option>
                     <option v-for="option in options" :value="option[keyName]" v-text="option[labelName]"
@@ -64,7 +64,8 @@
             value: [String, Number],
             required: Boolean,
             errorMessage: String,
-            showLabelSpace: Boolean
+            showLabelSpace: Boolean,
+            disabled: Boolean
         },
 
         methods: {
