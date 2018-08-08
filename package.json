@@ -41,16 +41,16 @@
     "mocha": "^4.0.1",
     "mocha-typescript": "^1.1.11",
     "mocha-webpack": "^0.7.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.9.2",
     "sass-loader": "^6.0.6",
     "sinon": "^4.0.1",
     "ts-loader": "^3.0.3",
     "typescript": "^2.5.3",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
-    "vue": "^2.5.2",
+    "vue": "^2.5.17",
     "vue-loader": "^13.3.0",
     "vue-property-decorator": "^6.0.0",
-    "vue-template-compiler": "^2.5.2",
+    "vue-template-compiler": "^2.5.17",
     "vue-test-utils": "^1.0.0-beta.2",
     "webpack": "^3.8.1",
     "webpack-node-externals": "^1.6.0",
@@ -58,7 +58,6 @@
   },
   "dependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "vue": "^2.5.2",
     "vue-class-component": "^6.0.0"
   }
 }
