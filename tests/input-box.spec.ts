@@ -494,4 +494,59 @@ suite("InputBox", () => {
 
         expect(wrapper.first('.form-control').value()).toBe('test');
     });
+
+
+    test("the max length of the input can be set", () => {
+        let wrapper: any = mount(InputBox, {
+            propsData: {
+                name: 'username',
+                label: 'My Label',
+                value: 'test',
+                maxLength: 10
+            }
+        });
+
+        expect(wrapper.first('input').hasAttribute('maxlength')).toBe(true);
+        expect(wrapper.first('input').getAttribute('maxlength')).toBe("10");
+    });
+
+    test("the max length of the input is set by default", () => {
+        let wrapper: any = mount(InputBox, {
+            propsData: {
+                name: 'username',
+                label: 'My Label',
+                value: 'test'
+            }
+        });
+
+        expect(wrapper.first('input').hasAttribute('maxlength')).toBe(true);
+        expect(wrapper.first('input').getAttribute('maxlength')).toBe("524288");
+    });
+
+    test("the autocomplete of the input is not rendered by default", () => {
+        let wrapper: any = mount(InputBox, {
+            propsData: {
+                name: 'username',
+                label: 'My Label',
+                value: 'test'
+            }
+        });
+
+        expect(wrapper.first('input').hasAttribute('autocomplete')).toBe(true);
+        expect(wrapper.first('input').getAttribute('autocomplete')).toBe('on');
+    });
+
+    test("the autocomplete of the input can be disabled", () => {
+        let wrapper: any = mount(InputBox, {
+            propsData: {
+                name: 'username',
+                label: 'My Label',
+                value: 'test',
+                autoComplete: false
+            }
+        });
+
+        expect(wrapper.first('input').hasAttribute('autocomplete')).toBe(true);
+        expect(wrapper.first('input').getAttribute('autocomplete')).toBe('off');
+    });
 });

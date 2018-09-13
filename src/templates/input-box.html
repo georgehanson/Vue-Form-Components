@@ -11,7 +11,7 @@
         <span v-if="slotExists('leftButton')" class="input-group-btn">
             <slot name="leftButton"></slot>
         </span>
-        <input v-on:input="updateValue($event.target.value)" :value="value" v-on:keyup.enter="enterKeyPressed" :class="inputClasses" :name="name" :type="type" :placeholder="placeholder" :readonly="readonly" :required="required">
+        <input v-on:input="updateValue($event.target.value)" :autocomplete="autoComplete ? 'on' : 'off'" :maxlength="maxLength" :value="value" v-on:keyup.enter="enterKeyPressed" :class="inputClasses" :name="name" :type="type" :placeholder="placeholder" :readonly="readonly" :required="required">
         <span v-if="slotExists('rightAddon')" class="input-group-addon">
             <slot name="rightAddon"></slot>
         </span>

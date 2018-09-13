@@ -74,6 +74,18 @@ import Component from 'vue-class-component';
             type: String,
             default: null,
             required: false
+        },
+        maxLength: {
+            type: Number,
+            default() {
+                return 524288;
+            },
+            required: false
+        },
+        autoComplete: {
+            type: Boolean,
+            default: true,
+            required: false
         }
     }
 })
