@@ -1,6 +1,6 @@
 # Vue Form Components
 
-[![Build Status](https://travis-ci.org/GeorgeHanson/Vue-Form-Components.svg?branch=master)](https://travis-ci.org/GeorgeHanson/Vue-Form-Components)
+[![Build Status](https://travis-ci.org/georgehanson/Vue-Form-Components.svg?branch=master)](https://travis-ci.org/georgehanson/Vue-Form-Components)
 [![npm version](https://badge.fury.io/js/vue-form-components.svg)](https://badge.fury.io/js/vue-form-components)
 [![npm](https://img.shields.io/npm/dt/vue-form-components.svg)](https://www.npmjs.com/package/vue-form-components)
 
