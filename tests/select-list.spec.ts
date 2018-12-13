@@ -55,7 +55,7 @@ suite("SelectList", () => {
             }
         });
         expect(wrapper.find('option').length).toBe(1);
-        expect(wrapper.first('option').value()).toBe('My Placeholder');
+        expect(wrapper.first('option').text()).toBe('My Placeholder');
     });
 
     test("if no helper is provided it does not show one", () => {
