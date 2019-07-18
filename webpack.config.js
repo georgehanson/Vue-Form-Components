@@ -1,6 +1,4 @@
-let webpack = require('webpack');
 let path = require('path');
-let UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 let nodeExternals = require('webpack-node-externals');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
