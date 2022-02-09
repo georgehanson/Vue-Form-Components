@@ -42,7 +42,7 @@
     "mocha": "^4.0.1",
     "mocha-typescript": "1.1.11",
     "mocha-webpack": "^0.7.0",
-    "node-sass": "^4.9.2",
+    "node-sass": "^7.0.0",
     "sass-loader": "^6.0.6",
     "sinon": "^4.0.1",
     "ts-loader": "^3.0.3",
